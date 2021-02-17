@@ -1,0 +1,506 @@
+/* -------------------------------------------------- */
+    /* BASIC STEUP */
+/* -------------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: rgba(255, 255, 255, 0.897);
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 300px;
+    font-size: 20px;
+    color: #555;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+/* .clearfix{zoom: 1;}
+.clearfix {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+} */
+
+
+/* -------------------------------------------------- */
+    /* REUSABLE COMPONENT */
+/* -------------------------------------------------- */
+
+.row
+{
+    width: 1140px;
+    margin: 0 auto;
+}
+section
+{
+    padding: 80px 0px;
+}
+.box{
+    padding-right: 20px;
+}
+
+
+/* ---------Heading------------- */
+h1,h2,h3
+{
+
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h1
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 250%;
+    color: white;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+
+}
+h2
+{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 180%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 10px;
+
+}
+
+h2::after
+{
+    display:block;
+    content: "";
+    background-color: #e67e22;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+
+}
+
+/* -------------Paragraph------------ */
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+.box p{
+    font-size: 90%;
+    line-height: 110%;
+}
+
+/* --------Icons-------- */
+.icon-big
+{
+    font-size: 350%;
+    display: block;
+    color: #e67e22 ;
+    margin-bottom: 10px;
+}
+.icon-small{
+    padding-right: 20px;
+    color: #e67e22 ;
+    display: inline-block;
+}
+
+
+
+/* -------------Buttons------------ */
+.btn
+{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid #e67e22 ;
+    color: white;
+    transition: background-color 0.2s, border-radius 0.2s, color 0.2s ; 
+}
+.btn-full:link,
+.btn-full:visited
+{
+    background-color: #e67e22;
+    color: white;
+    margin-right: 40px;
+}
+.btn-ghost:link,
+.btn-ghost:visited
+{
+    color: #e67e22;
+}
+
+.btn-full:hover,
+.btn-full:active
+{
+    background-color:#bf6516;
+    border: 1px solid #bf6516 ;
+}
+.btn-ghost:hover,
+.btn-ghost:active
+{
+    background-color:#bf6516;
+    color: white;
+    border: 1px solid #bf6516 ;
+}
+
+/* -------------------------------------------------- */
+    /* HEADER */
+/* -------------------------------------------------- */
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.hero-text-box
+{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo
+{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+}
+.main-nav li
+{
+    display: inline-block;
+    margin-top: 55px;
+    
+}
+.main-nav li a:link,
+.main-nav li a:visited
+{
+    padding: 8px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 20px;
+    color: white;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    
+}
+.main-nav li a:hover,
+.main-nav li a:active
+{
+    border-bottom: 2px solid #e67e22;
+}
+
+/* -------------------------------------------------- */
+    /* Meal Section */
+/* -------------------------------------------------- */
+.section-meal
+{
+    padding: 0px;
+    margin-bottom: 38%;
+}
+.meal-showcase
+{
+    width: 100%;
+    list-style: none;
+}
+.meal-showcase li
+{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo
+{
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.5);
+    transition: transform 0.2s opacity 0.2s;
+}
+.meal-photo img:hover
+{
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* -------------------------------------------------- */
+    /* Steps Section */
+/* -------------------------------------------------- */
+.section-step{
+    background-color: whitesmoke;
+}
+
+.step-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+.step-box:last-child{
+    padding-left: 3%;
+    margin-top: 80px;
+}
+.work-step:last-of-type{
+    margin-bottom: 80px;
+}
+.phone-food
+{
+    width: 40%;
+}
+.work-step{
+    margin-bottom: 50px;
+}
+.work-step div{
+    border: 2px solid #e67e22 ;
+    /* display: inline-block; */
+    color: #e67e22;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    float: left;
+    margin-right: 25px;
+}
+.app-img{
+    height: 50px;
+    width: auto;
+}
+
+/* -------------------------------------------------- */
+    /* cities Section */
+/* -------------------------------------------------- */
+.cities-img{
+    height: 160px;
+    width: auto;
+    margin-right: 20px;
+}
+.cities-offer ul{
+    list-style: none;
+    margin-top: 20px;
+}
+.cities-offer ul li{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+}
+.cities-icon
+{
+    margin-right: 10px;
+}
+.cities-offer ul li i{
+    padding-right: 10px;
+    color: #e67e22 ;
+    display: inline-block;
+
+}
+/* ------linkss------- */
+ a:link,
+ a:visited{
+    color: #e67e22 ;
+    transition: color 0.2px;
+    /* text-decoration: none; */
+    list-style: none;
+}
+a:hover{
+    color: grey;
+}
+
+/* -------------------------------------------------- */
+    /* Testimonial Section */
+/* -------------------------------------------------- */
+.section-testimonial{
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../css/img/back-customers.jpg);
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+}
+blockquote{
+    font-style: italic;
+    line-height: 145%;
+    font-size: 90%;
+    position: relative;
+}
+blockquote:before{
+    content: "\201C";
+    display: block;
+    font-size: 400%;
+    position: relative;
+    top: 10px;
+    left: -5px; 
+}
+cite{
+    font-size: 90%;
+    display:block;
+    margin-top: 30px;
+}
+cite img{
+    border-radius: 50% ;
+    height: 60px;
+    vertical-align: middle;
+}
+
+/* -------------------------------------------------- */
+    /* Price Section */
+/* -------------------------------------------------- */
+.section-price{
+    background-color: whitesmoke;
+}
+.plan-box{
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    
+}
+.plan-box:hover{
+    box-shadow: 0px 2px 20px orange;
+    cursor: pointer;
+}
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid rgb(216, 212, 212);
+}
+.plan-box div:first-child{
+    background-color: rgb(247, 229, 229);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+.plan-price{
+    font-size: 300%;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: #e67e22 ;
+
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+.plan-price-meal{
+    font-size: 100%;
+}
+.plan-box ul{
+    list-style: none;
+}
+.plan-box ul li{
+    padding: 7px;
+}
+
+/* -------------------------------------------------- */
+    /* Form Section */
+/* -------------------------------------------------- */
+
+.section-form{
+    width: 60%;
+    margin: auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    padding: 7px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(231, 228, 228) ;
+}
+input[type=checkbox]
+{
+    margin: 10px 5px 10px 0px;
+}
+*{
+    outline: none;
+}
+
+/* -------------------------------------------------- */
+    /* Footer */
+/* -------------------------------------------------- */
+footer{ 
+    background-color: rgb(104, 104, 104);
+    padding-top: 60px;
+}
+.footer-nav{
+    float: left;
+    list-style: none;
+}
+.social-links{
+    float: right;
+    list-style: none;
+    
+}
+.social-links li a{
+font-size: 150%;
+}
+.footer-nav li,
+.social-links li  {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 90%;
+    
+} 
+.footer-nav li:last-child,
+.social-links li:last-child{
+    
+    margin-right: 0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    color: whitesmoke;
+    transition: color 0.2s;
+    
+
+} 
+.footer-nav li a:active,
+.footer-nav li a:hover{
+    color: rgb(155, 155, 155);
+}
+
+.ion-social-facebook:hover{
+    color: #3b5998;
+}
+.ion-social-twitter:hover{
+    color: #00aced;
+}
+.ion-social-googleplus:hover{
+    color: #dd4b39;
+}
+.ion-social-instagram:hover{
+    color: #517fa4;
+}
+
+footer p{
+    text-align: center;
+    margin: 50px;
+    color: white;
+}
